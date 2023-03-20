@@ -22,7 +22,8 @@ public class SecurityConfiguration {
 	
 	// bu configuration class ı içerisinde 
 	
-	// TODO: csrf araştır
+//	CSRF (Cross Site Request Forgery) genel yapı olarak bir web sitesinin açığından faydalanarak site kullanıcılarının istekleri dışında sanki o kullanıcıymış gibi erişerek işlem yapılması sürecini içerir. 
+//	Genellikle GET requestleri ve SESSION işlemlerinin doğru kontrol edilememesi durumlarındaki açıklardan saldırganların faydalanmasını sağlamaktadır.
 	// authorizeHttpRequest ve devamında hangi bağlantılarda yetki gerektiği veya hangi yetkilerin gerektiğini belirtiriz
 	// sessionCreationPolicy -- 
 	// addFilterBefor her request in önün e TokenFilter ı belirtiriz

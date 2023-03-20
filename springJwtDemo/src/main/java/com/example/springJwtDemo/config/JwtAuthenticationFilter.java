@@ -19,7 +19,10 @@ import lombok.RequiredArgsConstructor;
 @Component
 @RequiredArgsConstructor
 public class JwtAuthenticationFilter extends OncePerRequestFilter {
-
+	// Component anotasyonu Spring'in custom bean leri algılamasını sağlar. 
+	// Yani program compile edilirken bu anotasyona sahip class ların instance ı oluşturulur ve belirtilen bağımlılıklar entegre edilir
+	
+	
   private final JwtService jwtService;
   private final UserDetailsService userDetailsService;
   
@@ -35,6 +38,7 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
       @NonNull FilterChain filterChain
   ) throws ServletException, IOException {
     final String authHeader = request.getHeader("Authorization");
+    // Http requestlerinde token Http Header içerisinde gelir
     // öncelikle request in üzerinden getHeader kısmından Authorization kısmını alırız.
     // Bu değişkenin içerisinde mesajlar şöyle durur : "Bearer <token>"
     // biz bu authHeader ın token kısmı ile ilgileniyoruz
